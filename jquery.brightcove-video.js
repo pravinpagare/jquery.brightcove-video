@@ -314,6 +314,18 @@ var
 			} );
 		},
 
+	    	/**
+	         * Load the brightcove video with brightcove ID.
+	         *
+	         * @param {string}  The brightcove ID
+	         */
+		loadVideoByID: function ( ID ) {
+		    return this.each(function () {
+		        $(this).data("brightcoveVideo").videoPlayer
+                    .loadVideoByID( ID );
+		    });
+		},
+		
 		/**
 		 * Seeks to a specified time position in the video.
 		 *
